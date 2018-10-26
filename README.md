@@ -2,10 +2,13 @@
 
 Simple service playground to play with localstack setup of aws services , **NOT using any Spring**.
 
-1) clone project, 
-2) fire up stack by:
+1) install localstack-cli ( https://github.com/localstack/awscli-local )
+2) fire up docker container by 
+   docker run  --name localstack -p 8080:8080 -p 4567-4582:4567-4582  localstack/localstack
+   (if you need to pull it do docker pull first)
+3) fire up stack by:
    awslocal cloudformation create-stack --template-body file://src/main/resources/test-formation.json --stack-name simple-stack-with-params --parameters ParameterKey=Prefix,ParameterValue=local
-3) then you can fire up HedgehogServicesImpl.
+4) then you can fire up HedgehogServicesImpl.
 
 
 
