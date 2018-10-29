@@ -11,7 +11,6 @@ import com.amazonaws.services.sqs.model.ListQueuesResult;
 import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.ReceiveMessageResult;
 import com.google.gson.Gson;
-import com.sun.tools.corba.se.idl.InvalidArgument;
 import hedgehogs.data.EvolutionPulse;
 import hedgehogs.data.Hedgehog;
 import hedgehogs.util.AWSHelpers;
