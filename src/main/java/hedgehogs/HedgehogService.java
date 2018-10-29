@@ -1,5 +1,6 @@
 package hedgehogs;
 
+import hedgehogs.data.EvolutionPulse;
 import hedgehogs.data.Hedgehog;
 
 /**
@@ -12,27 +13,18 @@ import hedgehogs.data.Hedgehog;
 
 interface HedgehogService {
     /**
-     * publishes new hedgehog with given name as a newborn
-     * @param name
+     * fires service up
      */
-    void createNewbornHedgehog(final String name);
-
+    void start();
 
     /**
-     * lists all current hedgehogs
+     * called for next evolution cycle
+     * @param evolutionPulse
      */
-    void listHedgehogs();
+    void handle(final EvolutionPulse evolutionPulse);
 
     /**
-     * invokes next evolutionCycle for given number of weeks
-     * @param period
+     * tears service down
      */
-    void evolutionCycle(final int period);
-
-   
-    /**
-     * runs death cycle on hedgehogs
-     * @param cutOffAge
-     */
-    void deathCycle(final int cutOffAge);
+    void shutdown();
 }
